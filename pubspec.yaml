@@ -1,0 +1,36 @@
+name: food_delivery_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+
+  fonts: 
+    - family: Sen
+      fonts:
+        - asset: assets/fonts/Sen-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Sen-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Sen-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Sen-Bold.ttf
+          weight: 700
