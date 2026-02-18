@@ -4,7 +4,13 @@ class ImageContainer extends StatelessWidget {
   final Widget image;
   final double? height;
   final double? width;
-  const ImageContainer({super.key, required this.image, this.height, this.width});
+
+  const ImageContainer({
+    super.key,
+    required this.image,
+    this.height,
+    this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class ImageContainer extends StatelessWidget {
       height: height ?? 100,
       decoration: BoxDecoration(
         color: const Color(0xFFFFBF6D),
-        borderRadius: BorderRadius.circular(50),
+        shape: BoxShape.circle, 
         boxShadow: [
           BoxShadow(
             color: const Color(0xFFF88222).withValues(alpha: .15),
@@ -23,8 +29,9 @@ class ImageContainer extends StatelessWidget {
           ),
         ],
       ),
-
-      child: image,
+      child: ClipOval( 
+        child: image,
+      ),
     );
   }
 }

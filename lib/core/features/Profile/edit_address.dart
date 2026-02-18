@@ -114,58 +114,48 @@ class _EditAddressState extends State<EditAddress> {
                   SizedBox(height: 24),
                   Text("Label as", style: TextStyles.caption1),
                   SizedBox(height: 10),
-                  Wrap(
-                    spacing: 15,
+                  Row(
                     children: [
-                      SizedBox(
-                        width: 110,
-                        height: 55,
+                      Expanded(
                         child: ChoiceChip(
                           label: const Text("Home"),
                           selected: selectedValue == "Home",
+                          showCheckmark: false,
                           selectedColor: Colors.orange,
                           backgroundColor: Colors.grey.shade300,
+                           shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(22.5),),
                           labelStyle: const TextStyle(color: Colors.black),
-                          showCheckmark: false,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              22.5,
-                            ), 
-                          ),
                           onSelected: (_) =>
                               setState(() => selectedValue = "Home"),
                         ),
                       ),
-                      SizedBox(
-                        width: 110,
-                        height: 55,
+                      
+                      Expanded(
                         child: ChoiceChip(
                           label: const Text("Work"),
                           selected: selectedValue == "Work",
+                          showCheckmark: false,
                           selectedColor: Colors.orange,
                           backgroundColor: Colors.grey.shade300,
-                          labelStyle: const TextStyle(color: Colors.black),
-                          showCheckmark: false,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(22.5),
-                          ),
+                            borderRadius: BorderRadius.circular(22.5),),
+                          labelStyle: const TextStyle(color: Colors.black),
                           onSelected: (_) =>
                               setState(() => selectedValue = "Work"),
                         ),
                       ),
-                      SizedBox(
-                        width: 110,
-                        height: 55,
+                      
+                      Expanded(
                         child: ChoiceChip(
                           label: const Text("Other"),
                           selected: selectedValue == "Other",
+                          showCheckmark: false,
                           selectedColor: Colors.orange,
                           backgroundColor: Colors.grey.shade300,
+                           shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(22.5),),
                           labelStyle: const TextStyle(color: Colors.black),
-                          showCheckmark: false,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(22.5),
-                          ),
                           onSelected: (_) =>
                               setState(() => selectedValue = "Other"),
                         ),
