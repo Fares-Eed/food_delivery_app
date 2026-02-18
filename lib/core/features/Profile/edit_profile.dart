@@ -44,25 +44,36 @@ class EditProfileScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 25),
-                Stack(
-                  children: [
-                    Center(
-                      child: ImageContainer(
-                        height: 130,
-                        width: 130,
-                        image: Image.asset(AppAssets.burger),
-                      ),
+                Center(
+                  child: SizedBox(
+                    height: 130,
+                    width: 130,
+                    child: Stack(
+                      children: [
+                       
+                        ImageContainer(
+                          height: 130,
+                          width: 130,
+                          image: Image.asset(AppAssets.burger),
+                        ),
+
+                        
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: FilledIconButton(
+                            onPressed: () {
+                             
+                            },
+                            iconData: const Icon(
+                              Icons.edit_outlined,
+                              color: Colors.white,
+                            ),
+                            fillcolor: AppColors.primaryColor,
+                          ),
+                        ),
+                      ],
                     ),
-                    Positioned(
-                      bottom: 0,
-                      right: 100,
-                      child: FilledIconButton(
-                        onPressed: () {},
-                        iconData: Icon(Icons.edit_outlined),
-                        fillcolor: AppColors.primaryColor,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
                 SizedBox(height: 18),
                 CustomFormField(

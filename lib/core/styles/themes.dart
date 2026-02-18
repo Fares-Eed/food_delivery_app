@@ -7,6 +7,7 @@ abstract class AppThemes {
   static ThemeData get lightTheme => ThemeData(
         fontFamily: AppFonts.sen,
     scaffoldBackgroundColor: AppColors.backgroundColor,
+    appBarTheme: AppBarTheme(backgroundColor: AppColors.backgroundColor, elevation: 0,),
     colorScheme: ColorScheme.fromSeed(
       onSurface: AppColors.blackColor,
       seedColor: AppColors.primaryColor,
