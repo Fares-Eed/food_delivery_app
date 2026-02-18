@@ -10,4 +10,10 @@ class AppAssets {
   static const String starSvg = 'assets/icons/Star.svg';
   static const String restaurant = 'assets/images/Restaurant.png';
   static const String burger = 'assets/images/Burger.png';
+  static const String reslogoSvg= 'assets/icons/ResLogo.svg';
+  static const String ing1Svg= 'assets/icons/I1.svg';
+  static const String ing2Svg= 'assets/icons/I2.svg';
+  static const String ing3Svg= 'assets/icons/I3.svg';
+  static const String ing4Svg= 'assets/icons/I4.svg';
+  static const String ing5Svg= 'assets/icons/I5.svg';
 }
