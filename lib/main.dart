@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/core/cart/cartScreen.dart';
+import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
 
 
@@ -14,11 +16,7 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:  AppThemes.lightTheme,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: Cartscreen()
     );
   }
 }

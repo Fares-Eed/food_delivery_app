@@ -9,5 +9,7 @@ class AppAssets {
   static const String starSvg = 'assets/icons/Star.svg';
   static const String restaurant = 'assets/images/Restaurant.png';
   static const String burger = 'assets/images/Burger.png';
+  static const String pizza = 'assets/images/pizza.webp';
+  static const String cartBreakdownIcon = 'assets/icons/Vector (3).png';
 
 }
