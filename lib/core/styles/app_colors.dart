@@ -9,4 +9,5 @@ class AppColors {
 
   static const Color borderColor = Color(0xffEDEDED);
   static const Color backgroundColor = Colors.white;
+  static const Color whiteColor = Colors.white;
 }

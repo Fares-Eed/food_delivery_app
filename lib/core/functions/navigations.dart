@@ -10,3 +10,6 @@ void pushReplacement(BuildContext context, Widget newScreen) {
     MaterialPageRoute(builder: (context) => newScreen),
   );
 }
+void pop(BuildContext context) {
+Navigator.of(context).pop();
+}

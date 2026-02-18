@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
+import 'package:food_delivery_app/features/Home/page/home_screen.dart';
 
 
 void main() {
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
       theme:  AppThemes.lightTheme,
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child:HomeScreen(),
         ),
       ),
     );
