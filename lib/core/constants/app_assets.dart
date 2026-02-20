@@ -10,6 +10,10 @@ class AppAssets {
   static const String restaurant = 'assets/images/Restaurant.png';
   static const String burger = 'assets/images/Burger.png';
   static const String pizza = 'assets/images/pizza.webp';
-  static const String cartBreakdownIcon = 'assets/icons/Vector (3).png';
-
+  static const String cash = 'assets/icons/Cash.png';
+  static const String visa = 'assets/icons/visa.png';
+  static const String cartBreakdownIcon = 'assets/icons/visa.png';
+  static const String mastercard = 'assets/icons/mastercard.png';
+  static const String paypal = 'assets/icons/paypal.png';
+  static const String paymentMethod = 'assets/images/paymentMethod.png';
 }
