@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/custom_form_field.dart';
@@ -6,10 +8,19 @@ import 'package:food_delivery_app/core/features/Profile/widgets/main_button.dart
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/filled_icon_button.dart';
+import 'package:image_picker/image_picker.dart';
 
-class EditProfileScreen extends StatelessWidget {
-  EditProfileScreen({super.key});
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({super.key});
+
+  @override
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
+}
+
+class _EditProfileScreenState extends State<EditProfileScreen> {
+  String? path;
   final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,19 +61,24 @@ class EditProfileScreen extends StatelessWidget {
                     width: 130,
                     child: Stack(
                       children: [
-                       
                         ImageContainer(
                           height: 130,
                           width: 130,
-                          image: Image.asset(AppAssets.burger),
+                          image: (path!=null)?Image.file(fit: BoxFit.cover,File(path!)):Image.asset(fit: BoxFit.cover,AppAssets.burger),
                         ),
 
-                        
                         Align(
                           alignment: Alignment.bottomRight,
                           child: FilledIconButton(
-                            onPressed: () {
-                             
+                            onPressed: () async {
+                              var image = await ImagePicker().pickImage(
+                                source: ImageSource.camera,
+                              );
+                              if (image != null) {
+                                setState(() {
+                                  path = image.path;
+                                });
+                              }
                             },
                             iconData: const Icon(
                               Icons.edit_outlined,

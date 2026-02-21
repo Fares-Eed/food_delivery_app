@@ -31,6 +31,7 @@ class ImageContainer extends StatelessWidget {
       ),
       child: ClipOval( 
         child: image,
+        
       ),
     );
   }
