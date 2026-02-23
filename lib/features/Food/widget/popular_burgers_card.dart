@@ -21,7 +21,7 @@ class PopularBurgersCard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 48),
             child: Container(
               width: 153,
-              height: 185,
+              height: 200,
               decoration: BoxDecoration(
                 color: AppColors.backgroundColor,
                 boxShadow: [
@@ -40,6 +40,7 @@ class PopularBurgersCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Gap(25),
                     Text(
                       'Burger',
                       style: TextStyles.body.copyWith(

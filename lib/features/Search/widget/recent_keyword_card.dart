@@ -3,8 +3,10 @@ import 'package:food_delivery_app/core/styles/text_styles.dart';
 
 class RecentKeywordCard extends StatelessWidget {
   const RecentKeywordCard({
-    super.key,
+    super.key
   });
+
+  
 
   @override
   Widget build(BuildContext context) {

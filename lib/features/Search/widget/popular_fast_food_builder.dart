@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/features/Search/widget/fast_food_card.dart';
 import 'package:gap/gap.dart';

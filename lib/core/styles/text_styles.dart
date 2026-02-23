@@ -14,6 +14,9 @@ class TextStyles {
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle button = TextStyle(fontSize: 16
+   , fontWeight: FontWeight.w700,
+  );
   static TextStyle body = TextStyle(fontSize: 15
    , fontWeight: FontWeight.w400,
   );

@@ -7,10 +7,11 @@ import 'package:food_delivery_app/features/Home/widget/all_categories_builder.da
 import 'package:food_delivery_app/features/Home/widget/cart_icon.dart';
 import 'package:food_delivery_app/features/Home/widget/open_restaurants_builder.dart';
 import 'package:food_delivery_app/features/Home/widget/search_bar.dart';
-//import 'package:food_delivery_app/features/Home/widget/search_bar.dart';
 import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +44,9 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
+  //
+  //----------------------------Functions---------------------------------------------
+  //
   AppBar _homeAppBar() {
     return AppBar(
       toolbarHeight: 65,

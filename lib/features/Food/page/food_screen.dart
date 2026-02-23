@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/custom_svg_picture.dart';
@@ -9,6 +10,8 @@ import 'package:food_delivery_app/features/Search/widget/circular_icon.dart';
 import 'package:gap/gap.dart';
 
 class FoodScreen extends StatelessWidget {
+  const FoodScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +27,14 @@ class FoodScreen extends StatelessWidget {
       ),
     );
   }
-
+  //
+  //----------------------------Functions---------------------------------------------
+  //
   AppBar _searchAppBar(BuildContext context) {
     return AppBar(
       toolbarHeight: 79,
       leadingWidth: 62,
-      leading: UnconstrainedBox(child: CircularIcon()),
+      leading: UnconstrainedBox(child: CircularIcon(onTap: () => pop(context),)),
 
       title: Container(
         width: 102,

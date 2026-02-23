@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/features/Food/widget/popular_burgers_card.dart';
-import 'package:food_delivery_app/features/Search/widget/circular_icon.dart';
 import 'package:gap/gap.dart';
 
 class PopularBurgersBuilder extends StatelessWidget {
@@ -38,7 +35,7 @@ class PopularBurgersBuilder extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 21,
-              crossAxisSpacing: 21,
+             // crossAxisSpacing: 10,
             ),
             itemBuilder: (context, index) {
               return PopularBurgersCard();

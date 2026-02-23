@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/functions/navigations.dart';
-import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
-import 'package:food_delivery_app/core/widgets/custom_svg_picture.dart';
 import 'package:food_delivery_app/features/Home/widget/cart_icon.dart';
 import 'package:food_delivery_app/features/Home/widget/search_bar.dart';
 import 'package:food_delivery_app/features/Search/widget/circular_icon.dart';
 import 'package:food_delivery_app/features/Search/widget/popular_fast_food_builder.dart';
 import 'package:food_delivery_app/features/Search/widget/recent_keywords_builder.dart';
-import 'package:food_delivery_app/features/Search/widget/suggested_restaurant_card.dart';
 import 'package:food_delivery_app/features/Search/widget/suggested_restaurants_builder.dart';
 import 'package:gap/gap.dart';
 
 class SearchScreen extends StatelessWidget {
+  const SearchScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: _searchAppBar(context),
@@ -33,7 +30,9 @@ class SearchScreen extends StatelessWidget {
     );
   }
 
-
+  //
+  //----------------------------Functions---------------------------------------------
+  //
 
 
   AppBar _searchAppBar(BuildContext context) {
