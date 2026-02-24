@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/cart/widgets/custom_button.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/payment/paymentMethod.dart';
+import 'package:food_delivery_app/core/payment/successful_payment_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -11,7 +13,7 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-  int selectedindex = -1;
+  int selectedindex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -135,6 +137,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
             SizedBox(height: 25),
             customButton(
+              onPressed: () {
+                pushTo(context, SuccessfulPaymentScreen());
+              },
               bgColor: Color(0xffFF7622),
               text: "Pay & Confirm",
               fontweight: FontWeight.w700,
