@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:food_delivery_app/core/features/Profile/profile_screen.dart';
+import 'package:food_delivery_app/core/features/orders/my_orders.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
 
 
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:  AppThemes.lightTheme,
-      home: ProfileScreen(),
+      home: MyOrders(),
     );
   }
 }
