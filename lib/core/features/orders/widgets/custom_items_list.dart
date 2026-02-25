@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/core/features/orders/Data/items.dart';
 import 'package:food_delivery_app/core/features/orders/widgets/secondary_button.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
@@ -14,10 +15,12 @@ class CustomItems extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       child: ListView.separated(
         separatorBuilder: (context, index) => SizedBox(height: 24),
-        itemBuilder: (context, index) => Column(
+        itemBuilder: (context, index)  { final item = Items.items[index];
+          return Column(
+         
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Food", style: TextStyles.caption1),
+            Text(item.type!, style: TextStyles.caption1),
             Divider(height: 16, color: AppColors.lightGreyColor1),
             SizedBox(height: 16),
     
@@ -28,9 +31,10 @@ class CustomItems extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                    color: AppColors.lightGreyColor,
+                    color: AppColors.backgroundColor,
                     borderRadius: BorderRadius.circular(8),
                   ),
+                  child:Image.asset(item.path!, fit: BoxFit.cover,)
                 ),
                 SizedBox(width: 14),
                 Expanded(
@@ -40,7 +44,7 @@ class CustomItems extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "Pizza Hut",
+                            item.title!,
                             style: TextStyles.caption1.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w700,
@@ -48,7 +52,7 @@ class CustomItems extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            "#162432",
+                            item.number!,
                             style: TextStyles.caption1,
                           ),
                         ],
@@ -57,7 +61,7 @@ class CustomItems extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "\$35.25",
+                            item.price!,
                             style: TextStyles.caption1.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w700,
@@ -68,7 +72,7 @@ class CustomItems extends StatelessWidget {
                             child: VerticalDivider(),
                           ),
                           Text(
-                            "03 Items",
+                            item.subtitle!,
                             style: TextStyles.caption2,
                           ),
                         ],
@@ -95,8 +99,9 @@ class CustomItems extends StatelessWidget {
               ],
             ),
           ],
-        ),
-        itemCount: 3,
+        );
+        },
+        itemCount: Items.items.length,
       ),
     );
   }

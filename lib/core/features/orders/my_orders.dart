@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/main_button.dart';
-import 'package:food_delivery_app/core/features/orders/widgets/custom_items.dart';
+import 'package:food_delivery_app/core/features/orders/widgets/custom_items_list.dart';
 import 'package:food_delivery_app/core/features/orders/widgets/secondary_button.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
