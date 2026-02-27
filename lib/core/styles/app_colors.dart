@@ -9,6 +9,7 @@ class AppColors {
 
   static const Color borderColor = Color(0xffEDEDED);
   static const Color backgroundColor = Colors.white;
-    static const Color cartBg = Color(0xff181C2E);
+  static const Color whiteColor = Colors.white;
+  static const Color cartBg = Color(0xff181C2E);
 
 }

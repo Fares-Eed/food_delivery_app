@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/cart/widgets/custom_button.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/cart/widgets/custom_button.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/functions/navigations.dart';
-import 'package:food_delivery_app/core/payment/paymentMethod.dart';
-import 'package:food_delivery_app/core/payment/successful_payment_screen.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/payment/paymentMethod.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/payment/successful_payment_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
