@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/cart/cartScreen.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/payment/payment_screen.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
-import 'package:food_delivery_app/features/Home/page/home_screen.dart';
+import 'package:food_delivery_app/features/2%20Home%20Features/Home/page/home_screen.dart';
 
 
 void main() {

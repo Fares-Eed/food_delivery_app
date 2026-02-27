@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
     this.onTap,
     this.onChange,
     this.focusNode,
+    this.autofocus=false,
   });
   final String hint;
   final Widget? prefixIcon;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final bool enabled;
+  final bool autofocus;
   final Function()? onTap;
   final Function(String)? onChange;
   final FocusNode? focusNode;
@@ -40,6 +42,7 @@ class CustomTextField extends StatelessWidget {
       validator: validator,
       onTap: onTap,
       onChanged: onChange,
+      autofocus: autofocus,
     );
   }
 }
