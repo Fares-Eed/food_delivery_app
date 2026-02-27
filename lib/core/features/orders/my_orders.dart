@@ -50,6 +50,7 @@ class MyOrders extends StatelessWidget {
             TabBar(
               unselectedLabelColor: AppColors.lightGreyColor,
               indicatorColor: AppColors.primaryColor,
+              indicatorPadding: EdgeInsets.symmetric(horizontal: 20),
               labelColor: AppColors.primaryColor,
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorWeight: 2,
