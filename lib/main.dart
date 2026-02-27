@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/core/cart/cartScreen.dart';
+import 'package:food_delivery_app/core/constants/app_assets.dart';
+import 'package:food_delivery_app/core/payment/payment_screen.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
 import 'package:food_delivery_app/features/Home/page/home_screen.dart';
 
@@ -15,11 +18,7 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:  AppThemes.lightTheme,
-      home: Scaffold(
-        body: Center(
-          child:HomeScreen(),
-        ),
-      ),
+      home: HomeScreen()
     );
   }
 }

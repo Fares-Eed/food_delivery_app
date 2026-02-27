@@ -16,4 +16,13 @@ class AppAssets {
   static const String ing3Svg= 'assets/icons/I3.svg';
   static const String ing4Svg= 'assets/icons/I4.svg';
   static const String ing5Svg= 'assets/icons/I5.svg';
+
+ 
+  static const String pizza = 'assets/images/pizza.webp';
+  static const String cash = 'assets/icons/Cash.png';
+  static const String visa = 'assets/icons/visa.png';
+  static const String cartBreakdownIcon = 'assets/icons/visa.png';
+  static const String mastercard = 'assets/icons/mastercard.png';
+  static const String paypal = 'assets/icons/paypal.png';
+  static const String paymentMethod = 'assets/images/paymentMethod.png';
 }
