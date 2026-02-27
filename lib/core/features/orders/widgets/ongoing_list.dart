@@ -15,7 +15,7 @@ class CustomItems extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       child: ListView.separated(
         separatorBuilder: (context, index) => SizedBox(height: 24),
-        itemBuilder: (context, index)  { final item = Items.items[index];
+        itemBuilder: (context, index)  { final item = Items.onlist[index];
           return Column(
          
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,7 +101,7 @@ class CustomItems extends StatelessWidget {
           ],
         );
         },
-        itemCount: Items.items.length,
+        itemCount: Items.onlist.length,
       ),
     );
   }
