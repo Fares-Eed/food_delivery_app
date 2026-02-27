@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/features/Food%20Details/page/food_details.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Search/widget/circular_icon.dart';
 import 'package:gap/gap.dart';
 
 class PopularBurgersCard extends StatelessWidget {
   const PopularBurgersCard({
-    super.key,
+    super.key,required this.burgerModel
   });
+  final BurgerModel burgerModel;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class PopularBurgersCard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 48),
             child: Container(
               width: 153,
-              height: 200,
+              height: 180,
               decoration: BoxDecoration(
                 color: AppColors.backgroundColor,
                 boxShadow: [
@@ -42,13 +43,13 @@ class PopularBurgersCard extends StatelessWidget {
                   children: [
                     Gap(25),
                     Text(
-                      'Burger',
+                      burgerModel.title,
                       style: TextStyles.body.copyWith(
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                     Text(
-                      'Just Burger',
+                      burgerModel.restaurantName,
                       style: TextStyles.body.copyWith(
                         color: AppColors.greyColor,
                       ),
@@ -57,7 +58,7 @@ class PopularBurgersCard extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '\$40',
+                          burgerModel.price,
                           style: TextStyles.subtitle.copyWith(
                             fontWeight: FontWeight.w700,
                           ),
@@ -78,8 +79,8 @@ class PopularBurgersCard extends StatelessWidget {
             top: 0,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Image.asset(
-                AppAssets.burger,
+              child: Image.network(
+                burgerModel.image,
                 width: 122,
                 height: 84,
                 fit: BoxFit.cover,

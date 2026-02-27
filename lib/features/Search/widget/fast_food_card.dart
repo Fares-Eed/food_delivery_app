@@ -4,12 +4,15 @@ import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/features/Food%20Details/page/food_details.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:gap/gap.dart';
 
 class FastFoodCard extends StatelessWidget {
   const FastFoodCard({
-    super.key,
+    super.key, required this.burgerModel,
+    
   });
+  final BurgerModel burgerModel;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +40,14 @@ class FastFoodCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'Burger',
+                    burgerModel.title,
                     style: TextStyles.body.copyWith(
                       fontWeight: FontWeight.w700,
                     ),
                     
                   ),
                   Text(
-                    'Cheese Burger',
+                    burgerModel.restaurantName,
                     style: TextStyles.body.copyWith(
                       color: AppColors.greyColor,
                     ),
@@ -60,8 +63,8 @@ class FastFoodCard extends StatelessWidget {
             top: 0,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Image.asset(
-                AppAssets.burger,
+              child: Image.network(
+                burgerModel.image,
                 width: 122,
                 height: 84,
                 fit: BoxFit.cover,

@@ -100,7 +100,7 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
   Column _foodNameAndRestaurant() {
     return Column(
       children: [
-        Row(children: [Text('Burger Bistro', style: TextStyles.title)]),
+        Row(children: [Text('Double Beef Burger', style: TextStyles.title)]),
         Row(
           children: [
             CustomSvgPicture(
@@ -240,31 +240,20 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen> {
     );
   }
 
-  Container _foodImageAndBar(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 321,
-
-      decoration: BoxDecoration(
-        color: Color(0xFF9CA8B6),
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(30),
-          bottomRight: Radius.circular(30),
-        ),
-      ),
-
-      child: Stack(
-        children: [
-          Center(
-            child: Image.asset(
-              AppAssets.burger,
-              width: double.infinity,
-              height: 321,
-            ),
+  Stack _foodImageAndBar(BuildContext context) {
+    return Stack(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
+          child: Image.network(
+            AppAssets.burger,
+            width: double.infinity,
+            height: 321,
+            fit: BoxFit.cover,
           ),
-          Positioned(left: 24, right: 24, top: 50, child: _foodBar(context)),
-        ],
-      ),
+        ),
+        Positioned(left: 24, right: 24, top: 50, child: _foodBar(context)),
+      ],
     );
   }
 

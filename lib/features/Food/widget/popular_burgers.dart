@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Food/widget/popular_burgers_card.dart';
 import 'package:gap/gap.dart';
 
@@ -31,14 +32,15 @@ class PopularBurgersBuilder extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
           //  padding: EdgeInsets.all(16),
-            itemCount: 4,
+            itemCount: popularBurgers.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 21,
-             // crossAxisSpacing: 10,
+              crossAxisSpacing: 21,
+             childAspectRatio: 153 / 180,//the defulte card shap in GridView  is cubed so we need to put this 
             ),
             itemBuilder: (context, index) {
-              return PopularBurgersCard();
+              return PopularBurgersCard(burgerModel:  popularBurgers[index]);
             },
           ),
         ),

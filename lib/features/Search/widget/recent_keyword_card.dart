@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 
 class RecentKeywordCard extends StatelessWidget {
   const RecentKeywordCard({
-    super.key
+    super.key, required this.categoryModel
   });
+  final CategoryModel categoryModel;
 
   
 
@@ -18,7 +20,7 @@ class RecentKeywordCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(33),
         
       ),
-      child: Center(child: Text('Burger',style: TextStyles.subtitle,)),
+      child: Center(child: Text(categoryModel.name,style: TextStyles.subtitle,)),
     );
   }
 }

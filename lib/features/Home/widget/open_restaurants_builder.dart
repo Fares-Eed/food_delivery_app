@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Home/widget/restaurant_card.dart';
 import 'package:gap/gap.dart';
 
@@ -27,12 +28,12 @@ class OpenRestaurantsBuilder extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) {
-            return RestaurantCard();
+            return RestaurantCard(restaurantModel: openRestaurants[index],);
           },
           separatorBuilder: (context, index) {
             return Gap(24);
           },
-          itemCount: 6,
+          itemCount: openRestaurants.length,
         ),
       ],
     );

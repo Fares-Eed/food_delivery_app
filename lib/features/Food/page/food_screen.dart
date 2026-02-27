@@ -6,6 +6,7 @@ import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/custom_svg_picture.dart';
 import 'package:food_delivery_app/features/Food/widget/popular_burgers.dart';
 import 'package:food_delivery_app/features/Home/widget/open_restaurants_builder.dart';
+import 'package:food_delivery_app/features/Search/page/search_screen.dart';
 import 'package:food_delivery_app/features/Search/widget/circular_icon.dart';
 import 'package:gap/gap.dart';
 
@@ -15,7 +16,7 @@ class FoodScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _searchAppBar(context),
+      appBar: _AppBar(context),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -30,7 +31,7 @@ class FoodScreen extends StatelessWidget {
   //
   //----------------------------Functions---------------------------------------------
   //
-  AppBar _searchAppBar(BuildContext context) {
+  AppBar _AppBar(BuildContext context) {
     return AppBar(
       toolbarHeight: 79,
       leadingWidth: 62,
@@ -70,6 +71,7 @@ class FoodScreen extends StatelessWidget {
                   bgColor: AppColors.blackColor,
                   width: 15,
                   height: 15,
+                  onTap: () => pushTo(context, SearchScreen()),
                 ),
                 CircularIcon(child: AppAssets.filterSvg, width: 22, height: 18),
               ],

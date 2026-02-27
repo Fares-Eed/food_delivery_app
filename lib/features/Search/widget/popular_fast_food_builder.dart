@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Search/widget/fast_food_card.dart';
 import 'package:gap/gap.dart';
 
@@ -27,7 +28,7 @@ class PopularFastFoodBuilder extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(), //
           shrinkWrap: true,
           padding: EdgeInsets.all(16),
-          itemCount: 6,
+          itemCount: popularBurgers.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 21,
@@ -35,7 +36,7 @@ class PopularFastFoodBuilder extends StatelessWidget {
             childAspectRatio: 153 / 144,
           ),
           itemBuilder: (context, index) {
-            return FastFoodCard();
+            return FastFoodCard(burgerModel: popularBurgers[index],);
           },
         ),
       ],

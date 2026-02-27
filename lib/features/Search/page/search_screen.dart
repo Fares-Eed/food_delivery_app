@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/features/Home/widget/cart_icon.dart';
 import 'package:food_delivery_app/features/Home/widget/search_bar.dart';
@@ -17,7 +18,7 @@ class SearchScreen extends StatelessWidget {
     body: SingleChildScrollView(
       child: Column(
         children: [Gap(10),
-          MySearchBar(hint:'Burger',suffixIcon: Icon(Icons.cancel),),
+          MySearchBar(hint:'Burger',suffixIcon: Icon(Icons.cancel),enabled: true,),
           Gap(24),
           RecentKeywordsBuilder(),
           Gap(32),
@@ -40,7 +41,7 @@ class SearchScreen extends StatelessWidget {
       toolbarHeight: 65,
       leadingWidth: 62,
       leading: UnconstrainedBox(
-        child: CircularIcon()
+        child: CircularIcon(onTap: () => pop(context),)
       ),
 
       title: Text('Search', style: TextStyles.subtitle),

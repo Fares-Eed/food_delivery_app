@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 
 class CategorieCard extends StatelessWidget {
   final bool isSelected;
   final VoidCallback onTap;
+  final CategoryModel categoryModel;
 
   const CategorieCard({
     super.key,
     required this.isSelected,
-    required this.onTap,
+    required this.onTap, required this.categoryModel,
   });
 
   @override
@@ -30,7 +32,7 @@ class CategorieCard extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Burger',
+            categoryModel.name,
             style: TextStyles.subtitle.copyWith(
               color: isSelected ? Colors.white : Colors.black,
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Search/widget/suggested_restaurant_card.dart';
 import 'package:gap/gap.dart';
 
@@ -28,7 +29,7 @@ class SuggestedRestaurantsBuilder extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
-              return SuggestedRestaurantCard();
+              return SuggestedRestaurantCard(restaurantModel: openRestaurants[index],);
             },
             separatorBuilder: (context, index) {
               return Column(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Home/widget/categorie_card.dart';
 import 'package:gap/gap.dart';
 
@@ -33,7 +34,7 @@ class AllCategoriesBuilder extends StatelessWidget {
             ],
           ),
         ),
-        Gap(15),
+        Gap(10),
         //list view
         SizedBox(
           height: 170,
@@ -41,12 +42,12 @@ class AllCategoriesBuilder extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return CategorieCard();
+              return CategorieCard(categoryModel: allCategories[index],);
             },
             separatorBuilder: (context, index) {
               return Gap(16);
             },
-            itemCount: 10,
+            itemCount: allCategories.length,
           ),
         ),
       ],

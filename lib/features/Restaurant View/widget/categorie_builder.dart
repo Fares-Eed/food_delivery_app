@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/features/Home/data/models_dummy_data.dart';
 import 'package:food_delivery_app/features/Restaurant%20View/widget/categorie_card.dart';
 import 'package:gap/gap.dart';
 class CategorieBuilder extends StatefulWidget {
@@ -25,10 +26,11 @@ class _CategorieBuilderState extends State<CategorieBuilder> {
                 selectedIndex = index; 
               });
             },
+            categoryModel: allCategories[index],
           );
         },
         separatorBuilder: (context, index) => const Gap(10),
-        itemCount: 10,
+        itemCount: allCategories.length,
       ),
     );
   }
