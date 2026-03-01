@@ -3,6 +3,7 @@ import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/Custom_choice_chip.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/custom_form_field.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/main_button.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/filled_icon_button.dart';
@@ -26,8 +27,6 @@ class _EditAddressState extends State<EditAddress> {
           child: Column(
             children: [
               Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.4,
                 decoration: BoxDecoration(
                   color: Color(0xffD0D9E1),
                   borderRadius: BorderRadius.only(
@@ -48,7 +47,7 @@ class _EditAddressState extends State<EditAddress> {
                       left: 24,
                       child: FilledIconButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          pop(context);
                         },
                         iconData: Icon(
                           Icons.arrow_back_ios_new,
@@ -98,6 +97,9 @@ class _EditAddressState extends State<EditAddress> {
                               if (value == null || value.isEmpty) {
                                 return "Enter your Post Code";
                               }
+                               else if(value.length!=6){
+                          return " Enter a valid Code";
+                        }
                               return null;
                             },
                           ),
@@ -109,8 +111,9 @@ class _EditAddressState extends State<EditAddress> {
                       title: "Appartment",
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return "Please enter your Post Code";
+                          return "Please enter your Appartment number";
                         }
+                       
                         return null;
                       },
                       keyboardtype: 2,
@@ -148,7 +151,7 @@ class _EditAddressState extends State<EditAddress> {
                       title: "Save Location",
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          Navigator.pop(context);
+                          pop(context);
                         }
                       },
                     ),

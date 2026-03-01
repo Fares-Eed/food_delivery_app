@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:  AppThemes.lightTheme,
-      home: MyOrders(),
+      home: ProfileScreen(),
     );
   }
 }

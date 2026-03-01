@@ -5,6 +5,7 @@ import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/custom_form_field.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/image_container.dart';
 import 'package:food_delivery_app/core/features/Profile/widgets/main_button.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/filled_icon_button.dart';
@@ -30,7 +31,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           padding: const EdgeInsets.only(left: 24),
           child: FilledIconButton(
             onPressed: () {
-              Navigator.pop(context);
+              pop(context);
             },
             iconData: Icon(
               Icons.arrow_back_ios_new,
@@ -64,7 +65,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         ImageContainer(
                           height: 130,
                           width: 130,
-                          image: (path!=null)?Image.file(fit: BoxFit.cover,File(path!)):Image.asset(fit: BoxFit.cover,AppAssets.burger),
+                          image: (path!=null)?Image.file(fit: BoxFit.cover,File(path!)):Image.asset(fit: BoxFit.cover,AppAssets.pizzahut),
                         ),
 
                         Align(
@@ -145,7 +146,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   title: "Save",
                   onTap: () {
                     if (_formKey.currentState!.validate()) {
-                      Navigator.pop(context);
+                      pop(context);
                     }
                   },
                 ),

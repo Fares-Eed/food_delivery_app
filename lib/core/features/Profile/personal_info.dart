@@ -28,7 +28,7 @@ class PersonalInfo extends StatelessWidget {
             ),
             fillcolor: AppColors.lightGreyColor1,
             onPressed: () {
-              Navigator.pop(context);
+              pop(context);
             },
           ),
         ),
@@ -58,7 +58,7 @@ class PersonalInfo extends StatelessWidget {
             SizedBox(height: 20),
             Row(
               children: [
-                ImageContainer(image: Image.asset(AppAssets.burger)),
+                ImageContainer(image: Image.asset(AppAssets.pizzahut)),
                 SizedBox(width: 32),
                 Column(
                   children: [
