@@ -13,10 +13,6 @@ abstract class AppThemes {
       onSurface: AppColors.blackColor,
       seedColor: AppColors.primaryColor,
     ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.backgroundColor,
-    )
-    ,
     inputDecorationTheme: InputDecorationTheme(
           enabledBorder: borderLessStyle(),
           focusedBorder: borderLessStyle(),
