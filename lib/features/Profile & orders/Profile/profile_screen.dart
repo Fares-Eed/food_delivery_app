@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/features/Profile/address_screen.dart';
-import 'package:food_delivery_app/core/features/Profile/data/info.dart';
-import 'package:food_delivery_app/core/features/Profile/personal_info.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/custom_list_tile.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/grey_container.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/image_container.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/address_screen.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/data/info.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/personal_info.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/custom_list_tile.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/grey_container.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/image_container.dart';
 import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';

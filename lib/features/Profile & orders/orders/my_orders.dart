@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/features/orders/widgets/history_list.dart';
-import 'package:food_delivery_app/core/features/orders/widgets/ongoing_list.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/orders/widgets/history_list.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/orders/widgets/ongoing_list.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
 import 'package:food_delivery_app/core/widgets/filled_icon_button.dart';

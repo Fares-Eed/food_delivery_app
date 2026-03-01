@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/features/Profile/edit_address.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/address_container.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/main_button.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/edit_address.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/address_container.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/main_button.dart';
 import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/styles/text_styles.dart';
