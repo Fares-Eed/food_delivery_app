@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
-import 'package:food_delivery_app/core/features/Profile/widgets/Custom_choice_chip.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/custom_choice_chip.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/custom_form_field.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/widgets/main_button.dart';
 import 'package:food_delivery_app/core/functions/navigations.dart';
