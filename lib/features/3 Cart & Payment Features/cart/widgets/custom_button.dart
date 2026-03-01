@@ -5,11 +5,12 @@ class customButton extends StatelessWidget {
     super.key,
     required this.bgColor,
     required this.text,
-     this.width=327,
-     this.height=62,
+    this.width = 327,
+    this.height = 62,
     this.radius = 12,
     this.fontsize = 14,
-    this.fontweight = FontWeight.w400,  this.textcolor = Colors.white,
+    this.fontweight = FontWeight.w400,
+    this.textcolor = Colors.white, this.onPressed,
   });
   final Color bgColor;
   final String text;
@@ -19,6 +20,7 @@ class customButton extends StatelessWidget {
   final double fontsize;
   final FontWeight? fontweight;
   final Color textcolor;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class customButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(radius),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         text,
         style: TextStyle(

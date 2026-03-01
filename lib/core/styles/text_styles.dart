@@ -10,16 +10,25 @@ class TextStyles {
   static TextStyle title = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
 
   static TextStyle subtitle = TextStyle(
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: FontWeight.w400,
   );
 
- // static TextStyle body = TextStyle(fontSize: 16);
+  static TextStyle button = TextStyle(fontSize: 16
+   , fontWeight: FontWeight.w700,
+  );
+  static TextStyle body = TextStyle(fontSize: 15
+   , fontWeight: FontWeight.w400,
+  );
 
-  static TextStyle caption1 = TextStyle(fontSize: 14);
+  static TextStyle caption1 = TextStyle(fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 
   static TextStyle caption2 = TextStyle(
     fontSize: 12,
     color: AppColors.greyColor,
+    fontWeight: FontWeight.w400,
+
   );
 }

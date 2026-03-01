@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/features/Profile/profile_screen.dart';
 import 'package:food_delivery_app/core/features/orders/my_orders.dart';
 import 'package:food_delivery_app/core/styles/themes.dart';
+import 'package:food_delivery_app/features/2%20Home%20Features/Home/page/home_screen.dart';
 
 
 void main() {
