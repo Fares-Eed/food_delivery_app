@@ -137,7 +137,7 @@ context;
     );
     },
     
-    child:Text('Verify',style: TextStyles.button,)
+    child:Text('Verify',style: TextStyles.button.copyWith(color: AppColors.white2),)
     )
   )
     ),

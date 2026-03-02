@@ -174,7 +174,7 @@ Navigator.push(
       borderRadius: BorderRadius.circular(16),
     ),
     alignment: Alignment.center,
-    child: Text('LOG IN',style: TextStyles.button,)
+    child: Text('LOG IN',style: TextStyles.button.copyWith(color: AppColors.white2),)
 
   )
     ),

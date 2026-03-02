@@ -215,7 +215,7 @@ SizedBox(height: 35),
       borderRadius: BorderRadius.circular(16),
     ),
     alignment: Alignment.center,
-    child: Text('Sign Up',style: TextStyles.button,)
+    child: Text('Sign Up',style: TextStyles.button.copyWith(color: AppColors.white2),)
 
   )
     ),

@@ -127,7 +127,7 @@ SizedBox(height: 24),
     );
     },
     
-    child:Text('SEND CODE',style: TextStyles.button,)
+    child:Text('SEND CODE',style: TextStyles.button.copyWith(color: AppColors.white2),)
     )
   )
     ),
