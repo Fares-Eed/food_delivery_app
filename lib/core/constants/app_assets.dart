@@ -25,4 +25,23 @@ class AppAssets {
   static const String mastercard = 'assets/icons/mastercard.png';
   static const String paypal = 'assets/icons/paypal.png';
   static const String paymentMethod = 'assets/images/paymentMethod.png';
+  static const String settings = 'assets/icons/settings.svg';
+  static const String reviews = 'assets/icons/reviews.svg';
+  static const String personal = 'assets/icons/personal.svg';
+  static const String payments = 'assets/icons/payments.svg';
+  static const String notifications = 'assets/icons/notifications.svg';
+  static const String map = 'assets/icons/map.svg';
+  static const String favourites = 'assets/icons/favourites.svg';
+  static const String faq = 'assets/icons/faq.svg';
+  static const String email = 'assets/icons/email.svg';
+  static const String cart = 'assets/icons/cart.svg';
+  static const String call = 'assets/icons/Call.svg';
+  static const String logout = 'assets/icons/Logout.svg';
+  static const String home = 'assets/icons/home.svg';
+  static const String work = 'assets/icons/work.svg';
+  static const String location = 'assets/images/location.png';
+  static const String macdonald = 'assets/images/MacDonalds.png';
+  static const String pizzahut = 'assets/images/pizza_hut.png';
+  static const String starbucks = 'assets/images/starbucks.png';
+
 }
