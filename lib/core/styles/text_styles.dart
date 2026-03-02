@@ -9,8 +9,7 @@ class TextStyles {
 
   static TextStyle title = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
 
-  static TextStyle subtitle = TextStyle(
-    fontSize: 17,
+  static TextStyle subtitle = TextStyle(fontSize: 17,
     fontWeight: FontWeight.w400,
   );
 
@@ -25,10 +24,22 @@ class TextStyles {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle caption2 = TextStyle(
-    fontSize: 12,
+  static TextStyle caption2 = TextStyle(fontSize: 12,
     color: AppColors.greyColor,
     fontWeight: FontWeight.w400,
 
   );
+ static TextStyle size30 = TextStyle(fontSize: 30,
+fontWeight: FontWeight.w700,
+color: Colors.white,
+);
+
+static TextStyle size13 = TextStyle(fontSize: 13,
+fontWeight: FontWeight.w400,
+color: Colors.white,
+);
+
+
+
+  
 }
