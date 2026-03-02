@@ -30,6 +30,7 @@ class ProfileScreen extends StatelessWidget {
               color: AppColors.blackColor,
             ),
             fillcolor: AppColors.lightGreyColor1,
+            onPressed: () => pop(context),
           ),
         ),
         title: Text(

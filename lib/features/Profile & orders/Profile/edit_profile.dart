@@ -47,110 +47,115 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         ),
       ),
 
-      body: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Form(
-          key: _formKey,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 25),
-                Center(
-                  child: SizedBox(
-                    height: 130,
-                    width: 130,
-                    child: Stack(
-                      children: [
-                        ImageContainer(
-                          height: 130,
-                          width: 130,
-                          image: (path!=null)?Image.file(fit: BoxFit.cover,File(path!)):Image.asset(fit: BoxFit.cover,AppAssets.pizzahut),
-                        ),
-
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: FilledIconButton(
-                            onPressed: () async {
-                              var image = await ImagePicker().pickImage(
-                                source: ImageSource.camera,
-                              );
-                              if (image != null) {
-                                setState(() {
-                                  path = image.path;
-                                });
-                              }
-                            },
-                            iconData: const Icon(
-                              Icons.edit_outlined,
-                              color: Colors.white,
-                            ),
-                            fillcolor: AppColors.primaryColor,
+      body: GestureDetector(
+        onTap: (){
+          FocusScope.of(context).unfocus();
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Form(
+            key: _formKey,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 25),
+                  Center(
+                    child: SizedBox(
+                      height: 130,
+                      width: 130,
+                      child: Stack(
+                        children: [
+                          ImageContainer(
+                            height: 130,
+                            width: 130,
+                            image: (path!=null)?Image.file(fit: BoxFit.cover,File(path!)):Image.asset(fit: BoxFit.cover,AppAssets.pizzahut),
                           ),
-                        ),
-                      ],
+        
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: FilledIconButton(
+                              onPressed: () async {
+                                var image = await ImagePicker().pickImage(
+                                  source: ImageSource.camera,
+                                );
+                                if (image != null) {
+                                  setState(() {
+                                    path = image.path;
+                                  });
+                                }
+                              },
+                              iconData: const Icon(
+                                Icons.edit_outlined,
+                                color: Colors.white,
+                              ),
+                              fillcolor: AppColors.primaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 18),
-                CustomFormField(
-                  title: "Full Name",
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your name';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 24),
-                CustomFormField(
-                  title: "Email",
-                  keyboardtype: 1,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your email';
-                    }
-                    if (value.contains('@') == false) {
-                      return 'Please enter a valid email';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 24),
-                CustomFormField(
-                  title: "Phone Number",
-                  keyboardtype: 2,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your phone number';
-                    }
-                    if (value.length != 11) {
-                      return 'Please enter a valid phone number';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 24),
-                CustomFormField(
-                  title: "Bio",
-                  maxlines: false,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your Bio';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 32),
-                MainButton(
-                  title: "Save",
-                  onTap: () {
-                    if (_formKey.currentState!.validate()) {
-                      pop(context);
-                    }
-                  },
-                ),
-              ],
+                  SizedBox(height: 18),
+                  CustomFormField(
+                    title: "Full Name",
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your name';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 24),
+                  CustomFormField(
+                    title: "Email",
+                    keyboardtype: 1,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your email';
+                      }
+                      if (value.contains('@') == false) {
+                        return 'Please enter a valid email';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 24),
+                  CustomFormField(
+                    title: "Phone Number",
+                    keyboardtype: 2,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your phone number';
+                      }
+                      if (value.length != 11) {
+                        return 'Please enter a valid phone number';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 24),
+                  CustomFormField(
+                    title: "Bio",
+                    maxlines: false,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your Bio';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 32),
+                  MainButton(
+                    title: "Save",
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        pop(context);
+                      }
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),

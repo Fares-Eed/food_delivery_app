@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
+import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/profile_screen.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/orders/widgets/history_list.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/orders/widgets/ongoing_list.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
@@ -36,7 +38,9 @@ class MyOrders extends StatelessWidget {
             child: FilledIconButton(
               iconData: Icon(Icons.more_horiz, color: AppColors.blackColor),
               fillcolor: AppColors.lightGreyColor1,
-              onPressed: () {},
+              onPressed: () {
+                pushTo(context, ProfileScreen());
+              },
             ),
           ),
         ],
