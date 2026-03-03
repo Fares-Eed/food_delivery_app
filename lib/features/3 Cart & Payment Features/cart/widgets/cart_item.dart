@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/core/constants/app_assets.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({super.key, required this.image, required this.title, required this.price, required this.quantity});

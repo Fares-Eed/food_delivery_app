@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:food_delivery_app/core/cart/widgets/cart_item.dart';
-import 'package:food_delivery_app/core/cart/widgets/custom_button.dart';
-import 'package:food_delivery_app/core/cart/widgets/custom_text_field.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/cart/widgets/cart_item.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/cart/widgets/custom_button.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/cart/widgets/custom_text_field.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 
