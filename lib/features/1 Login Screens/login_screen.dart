@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_delivery_app/core/functions/navigations.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
+import 'package:food_delivery_app/features/2%20Home%20Features/Home/page/home_screen.dart';
 import '../../core/styles/text_styles.dart';
 import 'register_screen.dart'; 
 import 'forget_screen.dart';
@@ -211,7 +213,8 @@ Row(
   children: [
 SvgPicture.asset(AppAssets.facebookicon),
 SvgPicture.asset(AppAssets.twittericon),
-SvgPicture.asset(AppAssets.icloudicon),
+
+GestureDetector(onTap: () => pushReplacement(context, HomeScreen()), child: SvgPicture.asset(AppAssets.icloudicon)),//
 
   ]
   )
