@@ -53,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         SizedBox(height: 10),
 
 
-      Text('Please sign up to get started',style: TextStyles.button, ),
+      Text('Please sign up to get started',style: TextStyles.button.copyWith(color: AppColors.white2), ),
 
 
 
