@@ -1,10 +1,8 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 
 import 'package:food_delivery_app/core/styles/themes.dart';
 import 'package:food_delivery_app/features/1%20Login%20Screens/splash_screen.dart';
-import 'package:food_delivery_app/features/2%20Home%20Features/Home/page/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,8 +17,6 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppThemes.lightTheme,
       home: SplashScreen(),
-
-    
     );
   }
 }

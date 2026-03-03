@@ -8,7 +8,6 @@ import 'package:food_delivery_app/features/2%20Home%20Features/Home/widget/all_c
 import 'package:food_delivery_app/features/2%20Home%20Features/Home/widget/cart_icon.dart';
 import 'package:food_delivery_app/features/2%20Home%20Features/Home/widget/open_restaurants_builder.dart';
 import 'package:food_delivery_app/features/2%20Home%20Features/Home/widget/search_bar.dart';
-import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/profile_screen.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/orders/my_orders.dart';
 import 'package:gap/gap.dart';
 
