@@ -15,14 +15,16 @@ class ForgetScreen extends StatefulWidget {
 }
 
 class _ForgetScreenState extends State<ForgetScreen> {
-  
+
+
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
 
       backgroundColor: Colors.white,
-      body: Column(
+      body: SafeArea(
+    child: Column(
         children: [
           Expanded(
             flex: 1,
@@ -48,13 +50,15 @@ class _ForgetScreenState extends State<ForgetScreen> {
       
      Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
+
         SizedBox(height: 85),
       Text('Forgot Password', style: TextStyles.size30),
         SizedBox(height: 10),
 
 
-      Text('Please sign in to your existing account',style: TextStyles.button, ),
+      Text('Please sign in to your existing account',style: TextStyles.button.copyWith(color: AppColors.white2), ),
 
 
 
@@ -85,7 +89,8 @@ SizedBox(height: 24),
 Text('Email', style: TextStyles.size13.copyWith(color:AppColors.black2)),
         SizedBox(height: 10),
 TextFormField(
-  decoration: InputDecoration(
+
+decoration: InputDecoration(
 fillColor: AppColors.lightgrey2,
 filled: true,
 
@@ -119,12 +124,14 @@ SizedBox(height: 24),
     ),
     alignment: Alignment.center,
     child: TextButton( onPressed: () {
+
       Navigator.push(
      context,
       MaterialPageRoute(
         builder: (context) => const VerficationScreen(),
       )
     );
+       
     },
     
     child:Text('SEND CODE',style: TextStyles.button.copyWith(color: AppColors.white2),)
@@ -139,6 +146,7 @@ SizedBox(height: 24),
          )
             ],
       ),
+      )
     );
   }
 }

@@ -14,6 +14,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
   bool isPasswordHidden = true;
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
         SizedBox(height: 10),
 
 
-      Text('Please sign in to your existing account',style: TextStyles.button, ),
+      Text('Please sign in to your existing account',style: TextStyles.button.copyWith(color: AppColors.white2), ),
 
 
 
@@ -80,7 +81,9 @@ child: Column(
 
 Text('Email', style: TextStyles.size13.copyWith(color:AppColors.black2)),
         SizedBox(height: 10),
+
 TextFormField(
+
   decoration: InputDecoration(
 fillColor: AppColors.lightgrey2,
 filled: true,
@@ -108,6 +111,7 @@ Text('Password', style: TextStyles.size13.copyWith(color: AppColors.black2)),
         SizedBox(height: 10),
 
 TextFormField(
+
   obscureText: isPasswordHidden,
   decoration: InputDecoration(
     fillColor: AppColors.lightgrey2,
@@ -151,12 +155,15 @@ TextFormField(
 
 Spacer(),
 TextButton(onPressed: () {
+
+
 Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => const ForgetScreen(),
       ),
     );
+
 } ,
  child: Text( 'Forgot Password', style: TextStyles.caption1.copyWith(color: AppColors.primaryColor)))
 
@@ -187,13 +194,14 @@ Row(
 
     TextButton(
       style: TextButton.styleFrom(padding: EdgeInsets.zero)
-      ,onPressed:(){    
+      ,onPressed:(){ 
       Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => const RegisterScreen(),
       ),
-    );},
+    );
+    },
 
     child: Text('Sign Up',style: TextStyles.button.copyWith(color: AppColors.primaryColor),
     ))

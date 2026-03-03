@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_delivery_app/core/styles/app_colors.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
 import '../../core/styles/text_styles.dart';
- 
+import 'package:pinput/pinput.dart';
 
 
 class VerficationScreen extends StatefulWidget {
@@ -19,6 +19,18 @@ class _VerficationScreenState extends State<VerficationScreen> {
 
   @override
   Widget build(BuildContext context) {
+final defaultPinTheme = PinTheme(
+
+  width: 56,
+  height: 56,
+  textStyle: TextStyles.size13.copyWith(color: AppColors.black2),
+  decoration: BoxDecoration(
+    color: AppColors.lightgrey2,
+    borderRadius: BorderRadius.circular(12),
+  
+)
+  );
+
 
     return Scaffold(
 
@@ -55,7 +67,7 @@ class _VerficationScreenState extends State<VerficationScreen> {
         SizedBox(height: 10),
 
 
-      Text('We have sent a code to your email',style: TextStyles.button, ),
+      Text('We have sent a code to your email',style: TextStyles.button.copyWith(color: AppColors.white2), ),
 
 
 
@@ -82,41 +94,28 @@ child: Column(
 
         SizedBox(height: 24),
 Row(
-children: [
-Spacer(),
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-      Text('Code', style: TextStyles.size13.copyWith(color:AppColors.black2)),
-        SizedBox(height: 10),
-         Text( 'Resend in.50sec', style: TextStyles.caption1.copyWith(color: AppColors.black2))
-  ] 
-        ),
+  children: [
+    Text('CODE', style: TextStyles.size13.copyWith(color: AppColors.black2)), 
 
-
-        Row(
- mainAxisAlignment: MainAxisAlignment.spaceBetween,
-children: [
-
-TextFormField(
-  decoration: InputDecoration(
-fillColor: AppColors.lightgrey2,
-filled: true,
-enabledBorder: OutlineInputBorder(
-  borderRadius: BorderRadius.circular(14),
-  borderSide: BorderSide.none,
+    Text('Resend in.50sec',style: TextStyles.caption1.copyWith(color: AppColors.black2)),
+  ],
 ),
 
-focusedBorder: OutlineInputBorder(
-  borderRadius: BorderRadius.circular(14),
-    borderSide: BorderSide.none,
-),
- 
-  
 
-  )
-),
-]
-        ),
+  //pinput
 
+
+Directionality(
+  textDirection: TextDirection.ltr,
+  child: Pinput(
+    length: 4, 
+    defaultPinTheme: defaultPinTheme,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+  ),
+),
 
 SizedBox(height: 24),
 
@@ -128,19 +127,11 @@ SizedBox(height: 24),
       color: AppColors.primaryColor,
       borderRadius: BorderRadius.circular(16),
     ),
-    alignment: Alignment.center,
-    child: TextButton( onPressed: () {
-context;
-      MaterialPageRoute(
-        builder: (context) => const VerficationScreen(),
-      
-    );
-    },
-    
+    alignment: Alignment.center, 
     child:Text('Verify',style: TextStyles.button.copyWith(color: AppColors.white2),)
     )
   )
-    ),
+          
 
         ]
 )  
@@ -148,7 +139,10 @@ context;
 
          )
             ],
+    
       ),
-    );
+  
+
+  );
   }
 }
