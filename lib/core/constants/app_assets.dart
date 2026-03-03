@@ -44,4 +44,15 @@ class AppAssets {
   static const String pizzahut = 'assets/images/pizza_hut.png';
   static const String starbucks = 'assets/images/starbucks.png';
 
-}
+
+static const String logoimage = 'assets/images/logoimage.svg';
+static const String orangeintro = 'assets/images/orangeintro.svg';
+static const String greyintro = 'assets/images/greyintro.svg';
+static const String facebookicon = 'assets/icons/facebookicon.svg';
+static const String twittericon = 'assets/icons/twittericon.svg';
+static const String icloudicon = 'assets/icons/icloudicon.svg';
+static const String backicon = 'assets/icons/backiconicon.svg';
+static const String rectangleicon = 'assets/icons/rectangleicon.svg';
+}  
+
+
