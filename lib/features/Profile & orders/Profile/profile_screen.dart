@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/constants/app_assets.dart';
+import 'package:food_delivery_app/features/1%20Login%20Screens/login_screen.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/cart/Cartscreen.dart';
+import 'package:food_delivery_app/features/3%20Cart%20&%20Payment%20Features/payment/payment_screen.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/address_screen.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/data/info.dart';
 import 'package:food_delivery_app/features/Profile%20&%20orders/Profile/personal_info.dart';
@@ -99,7 +102,9 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     title: "Cart",
                     assetName: AppAssets.cart,
-                    onTap: () {},
+                    onTap: () {
+                      pushTo(context, Cartscreen());
+                    },
                   ),
                   CustomListTile(
                     title: "Favourite",
@@ -114,7 +119,9 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     title: "Payment Method",
                     assetName: AppAssets.payments,
-                    onTap: () {},
+                    onTap: () {
+                      pushTo(context, PaymentScreen());
+                    },
                   ),
                 ],
               ),
@@ -144,7 +151,9 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     title: "Log Out",
                     assetName: AppAssets.logout,
-                    onTap: () {},
+                    onTap: () {
+                      pushReplacement(context, LoginScreen());
+                    },
                   ),
                 ],
               ),
