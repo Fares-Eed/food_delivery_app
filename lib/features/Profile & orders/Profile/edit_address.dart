@@ -71,6 +71,7 @@ class _EditAddressState extends State<EditAddress> {
                     children: [
                       CustomFormField(
                         title: "Address",
+                        hintText: "3235 Royal Ln. mesa, new jersy 34567",
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Please enter your address";
@@ -84,6 +85,7 @@ class _EditAddressState extends State<EditAddress> {
                           Expanded(
                             child: CustomFormField(
                               title: "Street",
+                              hintText: "hason nagar",
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return "Enter your Street";
@@ -96,6 +98,7 @@ class _EditAddressState extends State<EditAddress> {
                           Expanded(
                             child: CustomFormField(
                               title: "Post Code",
+                              hintText: "34567",
                               keyboardtype: 2,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
@@ -113,6 +116,7 @@ class _EditAddressState extends State<EditAddress> {
                       SizedBox(height: 15),
                       CustomFormField(
                         title: "Appartment",
+                        hintText: "345",
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Please enter your Appartment number";

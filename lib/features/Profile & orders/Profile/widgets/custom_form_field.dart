@@ -6,12 +6,14 @@ class CustomFormField extends StatelessWidget {
   final String? title;
   final int? keyboardtype;
   final bool? maxlines;
+  final String? hintText;
   final String? Function(String?)? validator;
   const CustomFormField({
     super.key,
     required this.title,
     this.keyboardtype,
-    this.maxlines, this.validator,
+    this.maxlines, this.validator, this.hintText,
+
   });
 
   @override
@@ -25,6 +27,7 @@ class CustomFormField extends StatelessWidget {
         ),
         SizedBox(height: 8),
         TextFormField(
+          
           validator: validator,
           keyboardType: keyboardtype == 1
               ? TextInputType.emailAddress
@@ -33,8 +36,12 @@ class CustomFormField extends StatelessWidget {
               : TextInputType.text,
           minLines: maxlines == false ? 3 : 1,
           maxLines: maxlines == false ? null : 1,
-
+              
           decoration: InputDecoration(
+            hint:Text(
+          hintText ?? "",
+          style: TextStyles.caption1.copyWith(color: AppColors.grey2),
+        ) ,
             filled: true,
             fillColor: AppColors.formfieldColor,
             border: OutlineInputBorder(
