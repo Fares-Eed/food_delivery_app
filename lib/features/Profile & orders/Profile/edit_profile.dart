@@ -99,6 +99,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   SizedBox(height: 18),
                   CustomFormField(
                     title: "Full Name",
+                    hintText: "Vishal Khadok",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your name';
@@ -109,6 +110,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   SizedBox(height: 24),
                   CustomFormField(
                     title: "Email",
+                    hintText: "hello@halallab.com",
                     keyboardtype: 1,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -123,6 +125,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   SizedBox(height: 24),
                   CustomFormField(
                     title: "Phone Number",
+                     hintText: "408-841-0926",
                     keyboardtype: 2,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -137,6 +140,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   SizedBox(height: 24),
                   CustomFormField(
                     title: "Bio",
+                    hintText: "I love fast food",
                     maxlines: false,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
