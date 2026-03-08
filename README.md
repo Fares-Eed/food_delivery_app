@@ -58,6 +58,10 @@ To get a local copy up and running, follow these simple steps.
    flutter run
    ```
 
+## Or try the app directly on the web
+https://fareseed-food-delivery.netlify.app/
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
